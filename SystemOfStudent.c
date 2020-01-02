@@ -16,45 +16,45 @@ void menu()
 {
 	printf("\n");
 	printf("\t\t********************************\n");
-	printf("\t\t\tÑ§Éú³É¼¨¹ÜÀíÏµÍ³\n");
+	printf("\t\t\tå­¦ç”Ÿæˆç»©ç®¡ç†ç³»ç»Ÿ\n");
 	printf("\t\t********************************\n");
-	printf("\t\t\t1.Ñ§ÉúÊäÈë\n");
-	printf("\t\t\t2.Ñ§Éú²åÈë\n");
-	printf("\t\t\t3.Ñ§ÉúÉ¾³ı\n");
-	printf("\t\t\t4.ĞŞ¸ÄĞÅÏ¢\n");
-	printf("\t\t\t5.Ñ§Éú²éÑ¯\n");
-	printf("\t\t\t6.Ñ§ÉúÊä³ö\n");
-	printf("\t\t\t7.°´×Ü·ÖÅÅĞò\n");
-	printf("\t\t\t8.°´Ñ§ºÅÅÅĞò\n");
-	printf("\t\t\t9.¼ÆËãÃ¿¿ÆµÄÆ½¾ù·Ö²¢Êä³öµÍÓÚÆ½¾ù·ÖµÄÑ§Éú\n");
-	printf("\t\t\t10.ÏÔÊ¾90·ÖÒÔÉÏµÄÍ¬Ñ§¼°²»¼°¸ñÍ¬Ñ§\n");
-	printf("\t\t\t0.ÍË³öÏµÍ³\n");
+	printf("\t\t\t1.å­¦ç”Ÿè¾“å…¥\n");
+	printf("\t\t\t2.å­¦ç”Ÿæ’å…¥\n");
+	printf("\t\t\t3.å­¦ç”Ÿåˆ é™¤\n");
+	printf("\t\t\t4.ä¿®æ”¹ä¿¡æ¯\n");
+	printf("\t\t\t5.å­¦ç”ŸæŸ¥è¯¢\n");
+	printf("\t\t\t6.å­¦ç”Ÿè¾“å‡º\n");
+	printf("\t\t\t7.æŒ‰æ€»åˆ†æ’åº\n");
+	printf("\t\t\t8.æŒ‰å­¦å·æ’åº\n");
+	printf("\t\t\t9.è®¡ç®—æ¯ç§‘çš„å¹³å‡åˆ†å¹¶è¾“å‡ºä½äºå¹³å‡åˆ†çš„å­¦ç”Ÿ\n");
+	printf("\t\t\t10.æ˜¾ç¤º90åˆ†ä»¥ä¸Šçš„åŒå­¦åŠä¸åŠæ ¼åŒå­¦\n");
+	printf("\t\t\t0.é€€å‡ºç³»ç»Ÿ\n");
 }
 
-void input() //Â¼ÈëºÍ²åÈëÑ§Éú³É¼¨ĞÅÏ¢²¢Ğ´ÈëÎÄ¼şÖĞ£¨´æÔÚÎÊÌâ£¬ÎŞ·¨½áÊøÑ§ÉúĞÅÏ¢ÊäÈëÑ­»·£¬ÎŞ·¨Ğ´ÈëÎÄ¼ş£© 
+void input() //å½•å…¥å’Œæ’å…¥å­¦ç”Ÿæˆç»©ä¿¡æ¯å¹¶å†™å…¥æ–‡ä»¶ä¸­ï¼ˆå­˜åœ¨é—®é¢˜ï¼Œæ— æ³•ç»“æŸå­¦ç”Ÿä¿¡æ¯è¾“å…¥å¾ªç¯ï¼Œæ— æ³•å†™å…¥æ–‡ä»¶ï¼‰ 
 {
 	FILE *fp;
 	Student *person, *p, *head = NULL, *temp;
 	int num, flag, count = 0;
 	char c;
 	
-	if ((fp=fopen("data.txt", "a"))== NULL) //¿ªÎÄ¼ş 
+	if ((fp=fopen("data.txt", "a"))== NULL) //å¼€æ–‡ä»¶ 
 	{
 		printf("ERROR...");
 		exit ;
 	}
 //	p = (Student *)malloc(sizeof(Student));
 	p = NULL;
-	do //Ñ­»·ÊäÈëÑ§ÉúĞÅÏ¢µ½Á´±íÖĞ 
+	do //å¾ªç¯è¾“å…¥å­¦ç”Ÿä¿¡æ¯åˆ°é“¾è¡¨ä¸­ 
 	{
 //		num = 0;
-		person = (Student *)malloc(sizeof(Student)); //¿ª±ÙÁ½¸ö¿Õ¼ä£¬pÓëpersonµÄ³õÊ¼Î»ÖÃÏàÍ¬ 
-		count++; //Ìí¼ÓµÄÑ§ÉúµÄ¸öÊıËæ×ÅÑ­»·µÄÔö¼Ó¶øÔö¼Ó 
-		flag = 1; //ÅĞ¶ÏÑ§ÉúÊÇ·ñÒÑ¾­´æÔÚµÄÁÙÊ±±äÁ¿ 
-		printf("\t\tÇëÊäÈëÒª¼ÓÈëµÄÑ§ÉúµÄÑ§ºÅ£º\n\t\t");
+		person = (Student *)malloc(sizeof(Student)); //å¼€è¾Ÿä¸¤ä¸ªç©ºé—´ï¼Œpä¸personçš„åˆå§‹ä½ç½®ç›¸åŒ 
+		count++; //æ·»åŠ çš„å­¦ç”Ÿçš„ä¸ªæ•°éšç€å¾ªç¯çš„å¢åŠ è€Œå¢åŠ  
+		flag = 1; //åˆ¤æ–­å­¦ç”Ÿæ˜¯å¦å·²ç»å­˜åœ¨çš„ä¸´æ—¶å˜é‡ 
+		printf("\t\tè¯·è¾“å…¥è¦åŠ å…¥çš„å­¦ç”Ÿçš„å­¦å·ï¼š\n\t\t");
 		scanf("%d", &num);
 		while(fscanf(fp, "%d %s %s %f %f %f %f %f %f %f", &head->num, head->name, head->sex, &head->score1, &head->score2,
-			&head->score3, &head->score4, &head->score5, &head->sum, &head->aver) == 10) //ÅĞ¶ÏÎÄ¼şÖĞÊÇ·ñÒÑ¾­´æÔÚ¸ÃÑ§ÉúµÄĞÅÏ¢ 
+			&head->score3, &head->score4, &head->score5, &head->sum, &head->aver) == 10) //åˆ¤æ–­æ–‡ä»¶ä¸­æ˜¯å¦å·²ç»å­˜åœ¨è¯¥å­¦ç”Ÿçš„ä¿¡æ¯ 
 		{
 			if (temp->num == num)
 			{
@@ -64,43 +64,43 @@ void input() //Â¼ÈëºÍ²åÈëÑ§Éú³É¼¨ĞÅÏ¢²¢Ğ´ÈëÎÄ¼şÖĞ£¨´æÔÚÎÊÌâ£¬ÎŞ·¨½áÊøÑ§ÉúĞÅÏ¢ÊäÈ
 		}
 		if (flag == 0)
 		{
-			printf("¸ÃÑ§ÉúĞÅÏ¢ÒÑ´æÔÚ...ÇëÖØĞÂÊäÈë...");
-			printf("\t\tÊÇ·ñ¼ÌĞøÊäÈë?(Y/N): ");
+			printf("è¯¥å­¦ç”Ÿä¿¡æ¯å·²å­˜åœ¨...è¯·é‡æ–°è¾“å…¥...");
+			printf("\t\tæ˜¯å¦ç»§ç»­è¾“å…¥?(Y/N): ");
 		    scanf("%*c%c", &c);
 		    if(c == 'N' || c == 'n')
 				break;
 		}
-		person->num = num; //½«numµÄÖµ¸øperson->num
-		printf("\t\tÇëÊäÈëÑ§ÉúµÄĞÕÃû:               \n\t\t");
+		person->num = num; //å°†numçš„å€¼ç»™person->num
+		printf("\t\tè¯·è¾“å…¥å­¦ç”Ÿçš„å§“å:               \n\t\t");
 	    scanf("%s", person->name); 
-	    printf("\t\tÇëÊäÈëÑ§ÉúµÄĞÔ±ğ:               \n\t\t");
+	    printf("\t\tè¯·è¾“å…¥å­¦ç”Ÿçš„æ€§åˆ«:               \n\t\t");
 	    scanf("%s", person->sex); 
-	    printf("\t\tÇëÊäÈëÑ§ÉúµÄ³É¼¨1:             \n\t\t"); 
+	    printf("\t\tè¯·è¾“å…¥å­¦ç”Ÿçš„æˆç»©1:             \n\t\t"); 
 	    scanf("%f", &person->score1); 
-	    printf("\t\tÇëÊäÈëÑ§ÉúµÄ³É¼¨2:               \n\t\t"); 
+	    printf("\t\tè¯·è¾“å…¥å­¦ç”Ÿçš„æˆç»©2:               \n\t\t"); 
 	    scanf("%f", &person->score2); 
-	    printf("\t\tÇëÊäÈëÑ§ÉúµÄ³É¼¨3:               \n\t\t"); 
+	    printf("\t\tè¯·è¾“å…¥å­¦ç”Ÿçš„æˆç»©3:               \n\t\t"); 
 	    scanf("%f", &person->score3); 
-	    printf("\t\tÇëÊäÈëÑ§ÉúµÄ³É¼¨4:               \n\t\t"); 
+	    printf("\t\tè¯·è¾“å…¥å­¦ç”Ÿçš„æˆç»©4:               \n\t\t"); 
 	    scanf("%f", &person->score4); 
-	    printf("\t\tÇëÊäÈëÑ§ÉúµÄ³É¼¨5:               \n\t\t"); 
+	    printf("\t\tè¯·è¾“å…¥å­¦ç”Ÿçš„æˆç»©5:               \n\t\t"); 
 	    scanf("%f", &person->score5);
-	    person->sum = person->score1 + person->score2 + person->score3 + person->score4 + person->score5; //¼ÆËãÎåÃÅ¿ÎµÄ×Ü³É¼¨ 
-	    person->aver = person->sum / 5; //ÇóÆ½¾ù³É¼¨ 
-	    if (count == 1) //µ±count=1µÄÊ±ºò£¬headÖ¸Ïòperson£¬headÒ²¾Í³ÉÎªÁËÒ»¸öÍ·½áµã£¨´ËÊ±personÊÇµÚÒ»¸ö½Úµã£© 
+	    person->sum = person->score1 + person->score2 + person->score3 + person->score4 + person->score5; //è®¡ç®—äº”é—¨è¯¾çš„æ€»æˆç»© 
+	    person->aver = person->sum / 5; //æ±‚å¹³å‡æˆç»© 
+	    if (count == 1) //å½“count=1çš„æ—¶å€™ï¼ŒheadæŒ‡å‘personï¼Œheadä¹Ÿå°±æˆä¸ºäº†ä¸€ä¸ªå¤´ç»“ç‚¹ï¼ˆæ­¤æ—¶personæ˜¯ç¬¬ä¸€ä¸ªèŠ‚ç‚¹ï¼‰ 
 	    {
 	    	head = person;
 		}
-		else //count!=1Ê±£¬p->nextÖ¸Ïòperson
+		else //count!=1æ—¶ï¼Œp->nextæŒ‡å‘person
 		{
 			p->next = person;
 		}
-		p = person; //½«pµÄÎ»ÖÃÒÆµ½person£¬ÒÔÉÏ¼¸ĞĞÄÚÈİĞÎ³ÉÁËÒ»¸öÁ´±í 
-	    printf("\t\tÊÇ·ñ¼ÌĞøÊäÈë?(Y/N): ");
+		p = person; //å°†pçš„ä½ç½®ç§»åˆ°personï¼Œä»¥ä¸Šå‡ è¡Œå†…å®¹å½¢æˆäº†ä¸€ä¸ªé“¾è¡¨ 
+	    printf("\t\tæ˜¯å¦ç»§ç»­è¾“å…¥?(Y/N): ");
 	    scanf("%*c%c", &c);
 	}while(c == 'y' || c == 'Y');
-	person->next = NULL; //½áÊøÑ­»·Ö®ºóp->next=NULL 
-	while (head != NULL) //½«Á´±íÖĞµÄÄÚÈİÒÀ´ÎĞ´ÈëÎÄ¼şÖĞ£¬ÆäÖĞheadÊÇÕû¸öÁ´±íµÄÍ· 
+	person->next = NULL; //ç»“æŸå¾ªç¯ä¹‹åp->next=NULL 
+	while (head != NULL) //å°†é“¾è¡¨ä¸­çš„å†…å®¹ä¾æ¬¡å†™å…¥æ–‡ä»¶ä¸­ï¼Œå…¶ä¸­headæ˜¯æ•´ä¸ªé“¾è¡¨çš„å¤´ 
 	{
 		fprintf(fp, "%d %s %s %.2f %.2f %.2f %.2f %.2f %.2f %.2f\n", head->num, head->name, head->sex, head->score1, head->score2,
 			head->score3, head->score4, head->score5, head->sum, head->aver);
@@ -109,7 +109,7 @@ void input() //Â¼ÈëºÍ²åÈëÑ§Éú³É¼¨ĞÅÏ¢²¢Ğ´ÈëÎÄ¼şÖĞ£¨´æÔÚÎÊÌâ£¬ÎŞ·¨½áÊøÑ§ÉúĞÅÏ¢ÊäÈ
 	fclose(fp);
 }
 
-Student *readfile() //½«ÎÄ¼şÖĞµÄĞÅÏ¢¶Á³ö²¢·Åµ½Á´±íÖĞ£¨¸Ğ¾õÊÇÎŞ·¨½«ÎÄ¼şÖĞµÄÊı¾İ¿é´æµ½Á´±íÖĞ£© 
+Student *readfile() //å°†æ–‡ä»¶ä¸­çš„ä¿¡æ¯è¯»å‡ºå¹¶æ”¾åˆ°é“¾è¡¨ä¸­ï¼ˆæ„Ÿè§‰æ˜¯æ— æ³•å°†æ–‡ä»¶ä¸­çš„æ•°æ®å—å­˜åˆ°é“¾è¡¨ä¸­ï¼‰ 
 {
 	FILE *fp;
 	Student *head, *p1, *p2;
@@ -129,76 +129,76 @@ Student *readfile() //½«ÎÄ¼şÖĞµÄĞÅÏ¢¶Á³ö²¢·Åµ½Á´±íÖĞ£¨¸Ğ¾õÊÇÎŞ·¨½«ÎÄ¼şÖĞµÄÊı¾İ¿é
 	{
 		fp = fopen("data.txt", "r");
 	}
-	p1 = (Student *)malloc(sizeof(Student)); //¿ª±Ù½á¹¹Ìå¿Õ¼ä
+	p1 = (Student *)malloc(sizeof(Student)); //å¼€è¾Ÿç»“æ„ä½“ç©ºé—´
 //	p1 = NULL;
 	head = p2 = p1;
 	while (fscanf(fp, "%d %s %s %f %f %f %f %f %f %f", &p1->num, p1->name, p1->sex, &p1->score1, &p1->score2,
-			&p1->score3, &p1->score4, &p1->score5, &p1->sum, &p1->aver) == 10) //´ÓÎÄ¼şÖĞ¶Á³öÄÚÈİµ½p1µÄÊ±ºòÑ­»· 
+			&p1->score3, &p1->score4, &p1->score5, &p1->sum, &p1->aver) == 10) //ä»æ–‡ä»¶ä¸­è¯»å‡ºå†…å®¹åˆ°p1çš„æ—¶å€™å¾ªç¯ 
 	{	
-		count++; //¶Á³öµÄÑ§ÉúĞÅÏ¢µÄÌõÊı 
-		if (count == 1) //µ±¶Á³öÑ§ÉúĞÅÏ¢ÌõÊıÎª1Ê±£¬headÒÆ¶¯µ½p1 
+		count++; //è¯»å‡ºçš„å­¦ç”Ÿä¿¡æ¯çš„æ¡æ•° 
+		if (count == 1) //å½“è¯»å‡ºå­¦ç”Ÿä¿¡æ¯æ¡æ•°ä¸º1æ—¶ï¼Œheadç§»åŠ¨åˆ°p1 
 		{
 			head = p1;
 		}
-		else //µ±¶Á³öÑ§ÉúĞÅÏ¢ÌõÊı²»Îª1µÄÊ±ºò£¬p2->nextÖ¸Ïòp1 
+		else //å½“è¯»å‡ºå­¦ç”Ÿä¿¡æ¯æ¡æ•°ä¸ä¸º1çš„æ—¶å€™ï¼Œp2->nextæŒ‡å‘p1 
 		{
 			p2->next = p1;
 		}
-		p2 = p1; //½«p2Ö¸ÕëÒÆ¶¯µ½p1µÄÎ»ÖÃ 
+		p2 = p1; //å°†p2æŒ‡é’ˆç§»åŠ¨åˆ°p1çš„ä½ç½® 
 
 //		p2->next = p1;
 //		p2 = p1;
-		p1 = (Student *)malloc(sizeof(Student)); //Îªp1¿ª±Ù½á¹¹Ìå¿Õ¼ä 
+		p1 = (Student *)malloc(sizeof(Student)); //ä¸ºp1å¼€è¾Ÿç»“æ„ä½“ç©ºé—´ 
 	}
-	p2 ->next = NULL; //×îºóp2->nextÖ¸ÏòNULL
+	p2 ->next = NULL; //æœ€åp2->nextæŒ‡å‘NULL
 	
 	fclose(fp);
-	return head; //·µ»ØÁ´±íÍ·head
+	return head; //è¿”å›é“¾è¡¨å¤´head
 }
 
-void del() //É¾³ıÑ§ÉúĞÅÏ¢²Ù×÷ 
+void del() //åˆ é™¤å­¦ç”Ÿä¿¡æ¯æ“ä½œ 
 {
 	FILE *fp;
-	Student *head, *p1, *p2, *p, *temp; //headÊÇµÚÒ»¸ö½Úµã(º¬Öµ) 
+	Student *head, *p1, *p2, *p, *temp; //headæ˜¯ç¬¬ä¸€ä¸ªèŠ‚ç‚¹(å«å€¼) 
 	int num, count = 0;
 	
-	head = readfile(); //¶Á³öÎÄ¼şÄÚÈİ
+	head = readfile(); //è¯»å‡ºæ–‡ä»¶å†…å®¹
 	if ((fp=fopen("data.txt", "w")) == NULL)
 	{
 		printf("ERROR...");
 		exit ;
 	}
-	p = p1 = p2 = head; //½«p1¡¢p2ÒÆ¶¯µ½headµÄÎ»ÖÃ
-	p1 = p1->next; //p2Ê¼ÖÕÔÚp1µÄºóÒ»Î»£¬p2ÊÇ¸ú°àÖ¸Õë
-	printf("ÇëÊäÈëÒªÉ¾³ıµÄÑ§ÉúµÄÑ§ºÅ£º");
+	p = p1 = p2 = head; //å°†p1ã€p2ç§»åŠ¨åˆ°headçš„ä½ç½®
+	p1 = p1->next; //p2å§‹ç»ˆåœ¨p1çš„åä¸€ä½ï¼Œp2æ˜¯è·Ÿç­æŒ‡é’ˆ
+	printf("è¯·è¾“å…¥è¦åˆ é™¤çš„å­¦ç”Ÿçš„å­¦å·ï¼š");
 	scanf("%d", &num);
-	while (p2 != NULL) //µ±p2²»ÎªNULLµÄÊ±ºòÑ­»·
+	while (p2 != NULL) //å½“p2ä¸ä¸ºNULLçš„æ—¶å€™å¾ªç¯
 	{
 		count++;
-		if (count == 1) //µÚÒ»¸ö½ÚµãÊ± 
+		if (count == 1) //ç¬¬ä¸€ä¸ªèŠ‚ç‚¹æ—¶ 
 		{
-			if (p2->num == num) //Èç¹ûµÚÒ»¸ö½Úµã¾ÍÊÇÒªÉ¾³ıµÄ£¬¾ÍÖ±½ÓÉ¾³ı 
+			if (p2->num == num) //å¦‚æœç¬¬ä¸€ä¸ªèŠ‚ç‚¹å°±æ˜¯è¦åˆ é™¤çš„ï¼Œå°±ç›´æ¥åˆ é™¤ 
 			{
 				temp = p2;
 				head = p2->next;
 				free(temp);
 				break;
 			}
-			else //·ñÔò¼ÌĞøÑ­»· 
+			else //å¦åˆ™ç»§ç»­å¾ªç¯ 
 			{
 				continue;
 			}
 		}
-		else //²»ÊÇµÚÒ»¸ö½ÚµãÊ± 
+		else //ä¸æ˜¯ç¬¬ä¸€ä¸ªèŠ‚ç‚¹æ—¶ 
 		{
-			if (p1->num == num) //Èç¹ûÕÒµ½ÒªÉ¾³ıµÄ½Úµã£¬Ö±½ÓÉ¾³ı 
+			if (p1->num == num) //å¦‚æœæ‰¾åˆ°è¦åˆ é™¤çš„èŠ‚ç‚¹ï¼Œç›´æ¥åˆ é™¤ 
 			{
 				temp = p1;
 				p2->next = p1->next;
 				free(temp);
 				break;
 			}
-			else //·ñÔòp1ºÍp2ÏòÇ°ÒÆ¶¯ 
+			else //å¦åˆ™p1å’Œp2å‘å‰ç§»åŠ¨ 
 			{
 				p1 = p1->next;
 				p2 = p2->next;
@@ -214,7 +214,7 @@ void del() //É¾³ıÑ§ÉúĞÅÏ¢²Ù×÷
 	fclose(fp);
 }
 
-void mod() //ĞŞ¸ÄÑ§ÉúĞÅÏ¢²Ù×÷ 
+void mod() //ä¿®æ”¹å­¦ç”Ÿä¿¡æ¯æ“ä½œ 
 {
 	FILE *fp;
 	char name[20], message[20];
@@ -222,36 +222,36 @@ void mod() //ĞŞ¸ÄÑ§ÉúĞÅÏ¢²Ù×÷
 	int num, snum;
 	float grade;
 	
-	p = head = readfile(); //½«ÎÄ¼şÖĞµÄÊı¾İ¿é¶ÁÈëÁ´±í
+	p = head = readfile(); //å°†æ–‡ä»¶ä¸­çš„æ•°æ®å—è¯»å…¥é“¾è¡¨
 	if ((fp=fopen("data.txt", "w")) == NULL)
 	{
 		printf("ERROR...");
 		exit ;
 	}
-	printf("\t\tÇëÊäÈëĞèÒªĞŞ¸ÄĞÅÏ¢µÄÑ§ÉúµÄĞÕÃû£º"); 
+	printf("\t\tè¯·è¾“å…¥éœ€è¦ä¿®æ”¹ä¿¡æ¯çš„å­¦ç”Ÿçš„å§“åï¼š"); 
 	scanf("%s", name);
 	while (head != NULL)
 	{
-		if(strcmp(head->name, name) == 0) //ÕÒµ½ĞèÒªĞŞ¸ÄĞÅÏ¢µÄÍ¬Ñ§Ö®ºó½øĞĞµÄ²Ù×÷ 
+		if(strcmp(head->name, name) == 0) //æ‰¾åˆ°éœ€è¦ä¿®æ”¹ä¿¡æ¯çš„åŒå­¦ä¹‹åè¿›è¡Œçš„æ“ä½œ 
 		{
-			printf("\t\t1.ĞÕÃû\n");
-			printf("\t\t2.ĞÔ±ğ\n");
-			printf("\t\t3.Ñ§ºÅ\n");
+			printf("\t\t1.å§“å\n");
+			printf("\t\t2.æ€§åˆ«\n");
+			printf("\t\t3.å­¦å·\n");
 			printf("\t\t4.score1\n");
 			printf("\t\t5.score2\n");
 			printf("\t\t6.score3\n");
 			printf("\t\t7.score4\n");
 			printf("\t\t8.score5\n");
-			printf("\t\tÇëÊäÈëÒªĞŞ¸ÃµÄĞÅÏ¢µÄĞòºÅ(1-8)£º");
+			printf("\t\tè¯·è¾“å…¥è¦ä¿®è¯¥çš„ä¿¡æ¯çš„åºå·(1-8)ï¼š");
 			scanf("%d", &num);
-			if (num < 1 || num > 8) //µ±num²»ÔÙÖ¸Áî·¶Î§ÄÚµÄÊ±ºò±¨´í
+			if (num < 1 || num > 8) //å½“numä¸å†æŒ‡ä»¤èŒƒå›´å†…çš„æ—¶å€™æŠ¥é”™
 			{
 				printf("\t\tERROR...");
 				break;
 			}
-			if (num >= 1 && num <= 2) //µ±numÎª1»ò2Ê±£¬½øĞĞ²Ù×÷ 
+			if (num >= 1 && num <= 2) //å½“numä¸º1æˆ–2æ—¶ï¼Œè¿›è¡Œæ“ä½œ 
 			{
-				printf("\t\tÇëÊäÈëĞŞ¸ÄºóµÄÑ§ÉúĞÕÃû»òĞÔ±ğ£º");
+				printf("\t\tè¯·è¾“å…¥ä¿®æ”¹åçš„å­¦ç”Ÿå§“åæˆ–æ€§åˆ«ï¼š");
 				scanf("%s", message);
 				switch (num)
 				{
@@ -261,13 +261,13 @@ void mod() //ĞŞ¸ÄÑ§ÉúĞÅÏ¢²Ù×÷
 			}
 			if(num == 3)
 			{
-				printf("\t\tÇëÊäÈëĞŞ¸ÄºóµÄÑ§ÉúµÄÑ§ºÅ£º");
+				printf("\t\tè¯·è¾“å…¥ä¿®æ”¹åçš„å­¦ç”Ÿçš„å­¦å·ï¼š");
 				scanf("%d", &snum);
 				head->num = snum;
 			}
 			if(num >= 4 && num <= 8)
 			{
-				printf("\t\tÇëÊäÈëĞŞ¸ÄÖ®ºóµÄÑ§ÉúµÄ³É¼¨£º");
+				printf("\t\tè¯·è¾“å…¥ä¿®æ”¹ä¹‹åçš„å­¦ç”Ÿçš„æˆç»©ï¼š");
 				scanf("%f", &grade);
 				switch(num)
 				{
@@ -278,12 +278,12 @@ void mod() //ĞŞ¸ÄÑ§ÉúĞÅÏ¢²Ù×÷
 					case 8: head->score5 = grade; break;
 				}
 			}
-			printf("ĞŞ¸Ä³É¹¦...");
+			printf("ä¿®æ”¹æˆåŠŸ...");
 			break;
 		}
 		else
 		{
-			printf("²»´æÔÚ¸ÃÑ§Éú...");
+			printf("ä¸å­˜åœ¨è¯¥å­¦ç”Ÿ...");
 			return ;
 		}
 		head = head->next;
@@ -297,17 +297,17 @@ void mod() //ĞŞ¸ÄÑ§ÉúĞÅÏ¢²Ù×÷
 	fclose(fp);
 }
 
-void query() //²éÑ¯Ñ§ÉúĞÅÏ¢
+void query() //æŸ¥è¯¢å­¦ç”Ÿä¿¡æ¯
 {
 	Student *head;
 	int num;
 	
 	head = readfile();
-	printf("ÇëÊäÈëĞèÒª²éÑ¯µÄÑ§ÉúµÄÑ§ºÅ£º");
+	printf("è¯·è¾“å…¥éœ€è¦æŸ¥è¯¢çš„å­¦ç”Ÿçš„å­¦å·ï¼š");
 	scanf("%d", &num);
 	if (head == NULL)
 	{
-		printf("Ã»ÓĞÕÒµ½Ñ§Éú³É¼¨...");
+		printf("æ²¡æœ‰æ‰¾åˆ°å­¦ç”Ÿæˆç»©...");
 		return ;
 	}
 	while (head != NULL)
@@ -322,7 +322,7 @@ void query() //²éÑ¯Ñ§ÉúĞÅÏ¢
 	}
 }
 
-void allquery() //²éÑ¯ËùÓĞÑ§ÉúĞÅÏ¢
+void allquery() //æŸ¥è¯¢æ‰€æœ‰å­¦ç”Ÿä¿¡æ¯
 {
 	Student *head;
 	int num;
@@ -330,13 +330,13 @@ void allquery() //²éÑ¯ËùÓĞÑ§ÉúĞÅÏ¢
 	head = readfile();
 	if (head == NULL)
 	{
-		printf("Ã»ÓĞÕÒµ½Ñ§ÉúĞÅÏ¢...");
+		printf("æ²¡æœ‰æ‰¾åˆ°å­¦ç”Ÿä¿¡æ¯...");
 		return ;
 	}
 	else
 	{
-		printf("Ñ§ÉúĞÅÏ¢ÈçÏÂ£º\n");
-		printf("Ñ§ºÅ\tĞÕÃû\tĞÔ±ğ\t³É¼¨1\t³É¼¨2\t³É¼¨3\t³É¼¨4\t³É¼¨5\t×Ü³É¼¨\tÆ½¾ù·Ö\n");
+		printf("å­¦ç”Ÿä¿¡æ¯å¦‚ä¸‹ï¼š\n");
+		printf("å­¦å·\tå§“å\tæ€§åˆ«\tæˆç»©1\tæˆç»©2\tæˆç»©3\tæˆç»©4\tæˆç»©5\tæ€»æˆç»©\tå¹³å‡åˆ†\n");
 		do
 		{
 			printf("%d  %s  %s  %.2f  %.2f  %.2f  %.2f  %.2f  %.2f  %.2f\n", head->num, head->name, head->sex, head->score1, head->score2,
@@ -346,7 +346,7 @@ void allquery() //²éÑ¯ËùÓĞÑ§ÉúĞÅÏ¢
 	}
 }
 
-void sortoftotal() //°´×Ü·ÖÅÅĞò£¨ÅĞ¶Ï½ÚµãÊıÊÇ·ñ¶àÓÚÁ½¸ö£¬Èç¹ûÉÙÓÚÁ½¸öµÄ»°£¬Ö±½ÓÊä³öÁ´±íÖĞµÄÄÚÈİ£© 
+void sortoftotal() //æŒ‰æ€»åˆ†æ’åºï¼ˆåˆ¤æ–­èŠ‚ç‚¹æ•°æ˜¯å¦å¤šäºä¸¤ä¸ªï¼Œå¦‚æœå°‘äºä¸¤ä¸ªçš„è¯ï¼Œç›´æ¥è¾“å‡ºé“¾è¡¨ä¸­çš„å†…å®¹ï¼‰ 
 {
 	Student *head, *p1, *p2, temp;
 	
@@ -354,12 +354,12 @@ void sortoftotal() //°´×Ü·ÖÅÅĞò£¨ÅĞ¶Ï½ÚµãÊıÊÇ·ñ¶àÓÚÁ½¸ö£¬Èç¹ûÉÙÓÚÁ½¸öµÄ»°£¬Ö±½ÓÊ
 	p1 = head;
 	if (head == NULL)
 	{
-		printf("Ã»ÓĞÑ§ÉúĞÅÏ¢...");
+		printf("æ²¡æœ‰å­¦ç”Ÿä¿¡æ¯...");
 		 return ;
 	}
 	if (p1->next == NULL)
 	{
-		printf("Ö»ÓĞÒ»¸öÑ§ÉúĞÅÏ¢£¬²»ĞèÅÅĞò...");
+		printf("åªæœ‰ä¸€ä¸ªå­¦ç”Ÿä¿¡æ¯ï¼Œä¸éœ€æ’åº...");
 		return ;
 	}
 	while (p1->next != NULL)
@@ -380,8 +380,8 @@ void sortoftotal() //°´×Ü·ÖÅÅĞò£¨ÅĞ¶Ï½ÚµãÊıÊÇ·ñ¶àÓÚÁ½¸ö£¬Èç¹ûÉÙÓÚÁ½¸öµÄ»°£¬Ö±½ÓÊ
 		}
 		p1 = p1->next;
 	}
-	printf("Ñ§ÉúĞÅÏ¢ÈçÏÂ£º\n");
-	printf("Ñ§ºÅ\tĞÕÃû\tĞÔ±ğ\t³É¼¨1\t³É¼¨2\t³É¼¨3\t³É¼¨4\t³É¼¨5\t×Ü³É¼¨\tÆ½¾ù·Ö\n");
+	printf("å­¦ç”Ÿä¿¡æ¯å¦‚ä¸‹ï¼š\n");
+	printf("å­¦å·\tå§“å\tæ€§åˆ«\tæˆç»©1\tæˆç»©2\tæˆç»©3\tæˆç»©4\tæˆç»©5\tæ€»æˆç»©\tå¹³å‡åˆ†\n");
 	while(head != NULL)
 	{
 		printf("%d  %s  %s  %.2f  %.2f  %.2f  %.2f  %.2f  %.2f  %.2f\n", head->num, head->name, head->sex, head->score1, head->score2,
@@ -390,7 +390,7 @@ void sortoftotal() //°´×Ü·ÖÅÅĞò£¨ÅĞ¶Ï½ÚµãÊıÊÇ·ñ¶àÓÚÁ½¸ö£¬Èç¹ûÉÙÓÚÁ½¸öµÄ»°£¬Ö±½ÓÊ
 	}
 }
 
-void sortofnum() //°´Ñ§ºÅÅÅĞò
+void sortofnum() //æŒ‰å­¦å·æ’åº
 {
 	Student *head, *p1, *p2, temp;
 	
@@ -398,12 +398,12 @@ void sortofnum() //°´Ñ§ºÅÅÅĞò
 	p1 = head;
 	if (head == NULL)
 	{
-		printf("Ã»ÓĞÑ§ÉúĞÅÏ¢...");
+		printf("æ²¡æœ‰å­¦ç”Ÿä¿¡æ¯...");
 		 return ;
 	}
 	if (p1->next == NULL)
 	{
-		printf("Ö»ÓĞÒ»¸öÑ§ÉúĞÅÏ¢£¬²»ĞèÅÅĞò...");
+		printf("åªæœ‰ä¸€ä¸ªå­¦ç”Ÿä¿¡æ¯ï¼Œä¸éœ€æ’åº...");
 		return ;
 	}
 	while (p1->next != NULL)
@@ -424,8 +424,8 @@ void sortofnum() //°´Ñ§ºÅÅÅĞò
 		}
 		p1 = p1->next;
 	}
-	printf("Ñ§ÉúĞÅÏ¢ÈçÏÂ£º\n");
-	printf("Ñ§ºÅ\tĞÕÃû\tĞÔ±ğ\t³É¼¨1\t³É¼¨2\t³É¼¨3\t³É¼¨4\t³É¼¨5\t×Ü³É¼¨\tÆ½¾ù·Ö\n");
+	printf("å­¦ç”Ÿä¿¡æ¯å¦‚ä¸‹ï¼š\n");
+	printf("å­¦å·\tå§“å\tæ€§åˆ«\tæˆç»©1\tæˆç»©2\tæˆç»©3\tæˆç»©4\tæˆç»©5\tæ€»æˆç»©\tå¹³å‡åˆ†\n");
 	while(head != NULL)
 	{
 		printf("%d  %s  %s  %.2f  %.2f  %.2f  %.2f  %.2f  %.2f  %.2f\n", head->num, head->name, head->sex, head->score1, head->score2,
@@ -434,7 +434,7 @@ void sortofnum() //°´Ñ§ºÅÅÅĞò
 	}
 }
 
-void average() //¼ÆËã¸÷¿ÆÆ½¾ù·Ö²¢Êä³öµÍÓÚÆ½¾ù·ÖµÄÍ¬Ñ§ 
+void average() //è®¡ç®—å„ç§‘å¹³å‡åˆ†å¹¶è¾“å‡ºä½äºå¹³å‡åˆ†çš„åŒå­¦ 
 {
 	Student *head, *p1, *p2, *p3, *p4, *p5;
 	float sum1 = 0, sum2 = 0, sum3 = 0, sum4 = 0, sum5 = 0;
@@ -442,7 +442,7 @@ void average() //¼ÆËã¸÷¿ÆÆ½¾ù·Ö²¢Êä³öµÍÓÚÆ½¾ù·ÖµÄÍ¬Ñ§
 	int count = 0;
 	
 	head = p1 = p2 = p3 = p4 = p5 = readfile();
-	while (head != NULL) //Çó¸÷¿ÆÆ½¾ù·ÖÒÔ¼°×Ü·Ö 
+	while (head != NULL) //æ±‚å„ç§‘å¹³å‡åˆ†ä»¥åŠæ€»åˆ† 
 	{
 		count++;
 		sum1 += head->score1;
@@ -458,7 +458,7 @@ void average() //¼ÆËã¸÷¿ÆÆ½¾ù·Ö²¢Êä³öµÍÓÚÆ½¾ù·ÖµÄÍ¬Ñ§
 	aver4 = sum4 / count;
 	aver5 = sum5 / count;
 	
-	printf("\t\tscore1³É¼¨µÍÓÚÆ½¾ù·ÖµÄÍ¬Ñ§ÓĞ£º\n");
+	printf("\t\tscore1æˆç»©ä½äºå¹³å‡åˆ†çš„åŒå­¦æœ‰ï¼š\n");
 	while (p1 != NULL)
 	{
 		if (p1->score1 < aver1)
@@ -467,7 +467,7 @@ void average() //¼ÆËã¸÷¿ÆÆ½¾ù·Ö²¢Êä³öµÍÓÚÆ½¾ù·ÖµÄÍ¬Ñ§
 		}
 		p1 = p1->next;
 	}
-	printf("\t\tscore2³É¼¨µÍÓÚÆ½¾ù·ÖµÄÍ¬Ñ§ÓĞ£º\n");
+	printf("\t\tscore2æˆç»©ä½äºå¹³å‡åˆ†çš„åŒå­¦æœ‰ï¼š\n");
 	while (p2 != NULL)
 	{
 		if (p2->score2 < aver2)
@@ -476,7 +476,7 @@ void average() //¼ÆËã¸÷¿ÆÆ½¾ù·Ö²¢Êä³öµÍÓÚÆ½¾ù·ÖµÄÍ¬Ñ§
 		}
 		p2 = p2->next;
 	}
-	printf("\t\tscore3³É¼¨µÍÓÚÆ½¾ù·ÖµÄÍ¬Ñ§ÓĞ£º\n");
+	printf("\t\tscore3æˆç»©ä½äºå¹³å‡åˆ†çš„åŒå­¦æœ‰ï¼š\n");
 	while (p3 != NULL)
 	{
 		if (p3->score3 < aver3)
@@ -485,7 +485,7 @@ void average() //¼ÆËã¸÷¿ÆÆ½¾ù·Ö²¢Êä³öµÍÓÚÆ½¾ù·ÖµÄÍ¬Ñ§
 		}
 		p3 = p3->next;
 	}
-	printf("\t\tscore4³É¼¨µÍÓÚÆ½¾ù·ÖµÄÍ¬Ñ§ÓĞ£º\n");
+	printf("\t\tscore4æˆç»©ä½äºå¹³å‡åˆ†çš„åŒå­¦æœ‰ï¼š\n");
 	while (p4 != NULL)
 	{
 		if (p4->score4 < aver4)
@@ -494,7 +494,7 @@ void average() //¼ÆËã¸÷¿ÆÆ½¾ù·Ö²¢Êä³öµÍÓÚÆ½¾ù·ÖµÄÍ¬Ñ§
 		}
 		p4 = p4->next;
 	}
-	printf("\t\tscore5³É¼¨µÍÓÚÆ½¾ù·ÖµÄÍ¬Ñ§ÓĞ£º\n");
+	printf("\t\tscore5æˆç»©ä½äºå¹³å‡åˆ†çš„åŒå­¦æœ‰ï¼š\n");
 	while (p5 != NULL)
 	{
 		if (p5->score5 < aver5)
@@ -505,12 +505,12 @@ void average() //¼ÆËã¸÷¿ÆÆ½¾ù·Ö²¢Êä³öµÍÓÚÆ½¾ù·ÖµÄÍ¬Ñ§
 	}
 }
 
-void qua() //ÏÔÊ¾¸÷¿Æ³É¼¨µÍÓÚ60·ÖÒÔ¼°¸ßÓÚ90·ÖµÄÍ¬Ñ§µÄ³É¼¨ 
+void qua() //æ˜¾ç¤ºå„ç§‘æˆç»©ä½äº60åˆ†ä»¥åŠé«˜äº90åˆ†çš„åŒå­¦çš„æˆç»© 
 {
 	Student *head, *p1, *p2, *p3, *p4, *p5;
 	
 	head = p1 = p2 = p3 = p4 = p5 = readfile();
-	printf("\t\tscore1³É¼¨µÍÓÚ60¡¢¸ßÓÚ90µÄÍ¬Ñ§ÓĞ£º\n");
+	printf("\t\tscore1æˆç»©ä½äº60ã€é«˜äº90çš„åŒå­¦æœ‰ï¼š\n");
 	while (p1 != NULL)
 	{
 		if (p1->score1 < 60 || p1->score1 > 90)
@@ -519,7 +519,7 @@ void qua() //ÏÔÊ¾¸÷¿Æ³É¼¨µÍÓÚ60·ÖÒÔ¼°¸ßÓÚ90·ÖµÄÍ¬Ñ§µÄ³É¼¨
 		}
 		p1 = p1->next;
 	}
-	printf("\t\tscore2³É¼¨µÍÓÚ60¡¢¸ßÓÚ90µÄÍ¬Ñ§ÓĞ£º\n");
+	printf("\t\tscore2æˆç»©ä½äº60ã€é«˜äº90çš„åŒå­¦æœ‰ï¼š\n");
 	while (p2 != NULL)
 	{
 		if (p2->score2 < 60 || p2->score2 > 90)
@@ -528,7 +528,7 @@ void qua() //ÏÔÊ¾¸÷¿Æ³É¼¨µÍÓÚ60·ÖÒÔ¼°¸ßÓÚ90·ÖµÄÍ¬Ñ§µÄ³É¼¨
 		}
 		p2 = p2->next;
 	}
-	printf("\t\tscore3³É¼¨µÍÓÚ60¡¢¸ßÓÚ90µÄÍ¬Ñ§ÓĞ£º\n");
+	printf("\t\tscore3æˆç»©ä½äº60ã€é«˜äº90çš„åŒå­¦æœ‰ï¼š\n");
 	while (p3 != NULL)
 	{
 		if (p3->score3 < 60 || p3->score3 > 90)
@@ -537,7 +537,7 @@ void qua() //ÏÔÊ¾¸÷¿Æ³É¼¨µÍÓÚ60·ÖÒÔ¼°¸ßÓÚ90·ÖµÄÍ¬Ñ§µÄ³É¼¨
 		}
 		p3 = p3->next;
 	}
-	printf("\t\tscore4³É¼¨µÍÓÚ60¡¢¸ßÓÚ90µÄÍ¬Ñ§ÓĞ£º\n");
+	printf("\t\tscore4æˆç»©ä½äº60ã€é«˜äº90çš„åŒå­¦æœ‰ï¼š\n");
 	while (p4 != NULL)
 	{
 		if (p4->score4 < 60 || p4->score4 > 90)
@@ -546,7 +546,7 @@ void qua() //ÏÔÊ¾¸÷¿Æ³É¼¨µÍÓÚ60·ÖÒÔ¼°¸ßÓÚ90·ÖµÄÍ¬Ñ§µÄ³É¼¨
 		}
 		p4 = p4->next;
 	}
-	printf("\t\tscore5³É¼¨µÍÓÚ60¡¢¸ßÓÚ90µÄÍ¬Ñ§ÓĞ£º\n");
+	printf("\t\tscore5æˆç»©ä½äº60ã€é«˜äº90çš„åŒå­¦æœ‰ï¼š\n");
 	while (p5 != NULL)
 	{
 		if (p5->score5 < 60 || p5->score5 > 90)
@@ -564,7 +564,7 @@ int main()
 	while (1)
 	{
 		menu(); 
-		printf("\t\tÇëÊäÈëÕıÈ·µÄÖ¸Áî£¨0-10£©£º");
+		printf("\t\tè¯·è¾“å…¥æ­£ç¡®çš„æŒ‡ä»¤ï¼ˆ0-10ï¼‰ï¼š");
 		scanf("%d", &num);
 		system("cls");
 		switch (num)
@@ -579,10 +579,10 @@ int main()
 			case 8: sortofnum(); break;
 			case 9: average(); break;
 			case 10: qua(); break;
-			case 0: printf("\t\tĞ»Ğ»Ê¹ÓÃ..."); return 0;
-			default: printf("\t\tÎŞĞ§Ö¸Áî..."); break;
+			case 0: printf("\t\tè°¢è°¢ä½¿ç”¨..."); return 0;
+			default: printf("\t\tæ— æ•ˆæŒ‡ä»¤..."); break;
 		}
-		printf("²Ù×÷³É¹¦...");
+		printf("æ“ä½œæˆåŠŸ...");
 //		sleep(3);
 //		system("cls");
 	}
